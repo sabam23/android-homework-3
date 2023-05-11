@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="25dp">
+
+   <EditText
+       android:id="@+id/nameEditText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="First Name"
+       android:inputType="text"
+       android:layout_marginBottom="15dp"
+       />
+    <EditText
+        android:id="@+id/surnameEditText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Last Name"
+       android:inputType="text"
+        android:layout_marginBottom="15dp"
+       />
+    <EditText
+        android:id="@+id/emailEditText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Email"
+       android:inputType="textEmailAddress"
+        android:layout_marginBottom="15dp"
+       />
+    <EditText
+        android:maxLength="13"
+        android:id="@+id/personalID"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="id"
+       android:inputType="text"
+        android:layout_marginBottom="15dp"
+       />
+    <EditText
+        android:id="@+id/img"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="IMG link"
+       android:inputType="text"
+        android:layout_marginBottom="20dp"
+       />
+
+    <Button
+        android:id="@+id/sumbitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="19sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
