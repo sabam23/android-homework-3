@@ -34,7 +34,14 @@ class MainActivity : AppCompatActivity() {
             val email = email.text.toString()
             val img = img.text.toString()
 
-            if (id.length == 13) {
+            if (name.isEmpty() || email.isEmpty() || surname.isEmpty()
+                || id.isEmpty() || img.isEmpty()) {
+                Toast.makeText(this, "Fill the fields", Toast.LENGTH_SHORT).show()
+            } else if (id.length < 13) {
+                Toast.makeText(this, "Id should be 13 digits", Toast.LENGTH_SHORT).show()
+            } else if (!email.contains("@")) {
+                Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT).show()
+            } else {
                 val studentInfo = Student(
                     name,
                     surname,
@@ -43,13 +50,9 @@ class MainActivity : AppCompatActivity() {
                     img
                 )
                 db.child("student1").setValue(studentInfo)
+                Toast.makeText(this, "Submitted", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, ProfileActivity::class.java))
                 finish()
-            } else if (
-                name.isEmpty() || email.isEmpty() || surname.isEmpty()
-                || id.isEmpty() || img.isEmpty()
-            ) {
-                Toast.makeText(this, "Fill the fields", Toast.LENGTH_SHORT).show()
             }
         }
     }
